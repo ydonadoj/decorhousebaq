@@ -1,0 +1,13 @@
+# ============================================================
+# DECORHOUSE BAQ — robots.txt
+# Permite indexación completa excepto carpetas privadas
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Bloquear carpetas que no deben indexarse
+Disallow: /assets/private/
+
+# Sitemap
+Sitemap: https://[tu-dominio]/sitemap.xml

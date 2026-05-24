@@ -1,0 +1,18 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+
+# El prompt de desarrollo (no necesario en el repo)
+PROMPT_CLAUDECODE_DECORHOUSEBAQ.md
