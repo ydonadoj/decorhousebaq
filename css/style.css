@@ -2020,12 +2020,35 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
 }
 
 @media (max-width: 768px) {
+
+  /* --- Padding de secciones reducido en mobile --- */
+  .servicios,
+  .galeria,
+  .nosotros,
+  .contacto,
+  .testimonios {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+    overflow: hidden; /* contiene animaciones fade-left/right */
+  }
+
+  /* --- Tipografía responsive --- */
+  .section-title {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 9vw, 3.5rem);
+  }
+
+  /* --- Grids --- */
   .servicios__grid {
     grid-template-columns: 1fr;
   }
 
   .galeria__grid {
     columns: 2;
+    column-gap: 0.75rem;
   }
 
   .nosotros__grid {
@@ -2041,29 +2064,41 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
     bottom: var(--space-sm);
   }
 
-  .testimonios__grid {
-    grid-template-columns: 1fr;
-    /* Scroll horizontal en mobile con scroll-snap */
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding: var(--space-md);
-    gap: var(--space-md);
-    padding-bottom: var(--space-sm);
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .testimonial-card {
-    scroll-snap-align: start;
-    min-width: min(85vw, 320px);
-    max-width: 90vw;
-    flex-shrink: 0;
-  }
-
   .nosotros__img-wrap::before {
     display: none;
   }
 
+  /* --- Testimonios: carousel horizontal con scroll-snap --- */
+  .testimonios {
+    overflow: hidden;       /* sección recorta */
+  }
+
+  .testimonios__grid {
+    display: flex;
+    overflow-x: auto;       /* scroll interno del grid, no de la sección */
+    scroll-snap-type: x mandatory;
+    scroll-padding: var(--space-md);
+    gap: var(--space-md);
+    padding-bottom: var(--space-sm);
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+    -webkit-overflow-scrolling: touch;
+    /* Ocultar scrollbar visualmente */
+    scrollbar-width: none;
+  }
+
+  .testimonios__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-card {
+    scroll-snap-align: start;
+    min-width: min(80vw, 300px);
+    max-width: 85vw;
+    flex-shrink: 0;
+  }
+
+  /* --- Stats: 2×2 --- */
   .stats__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2072,6 +2107,7 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
     display: none;
   }
 
+  /* --- Footer --- */
   .footer__grid {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
@@ -2082,13 +2118,36 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
     text-align: center;
   }
 
+  /* --- Hero CTAs: columna, botones full-width --- */
   .hero__ctas {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .hero__ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* --- Botón form: permite wrap --- */
+  .form-submit {
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  /* --- Contacto: padding reducido en la tarjeta --- */
+  .contacto__form-wrap,
+  .contact__form-card {
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
   }
 }
 
 @media (max-width: 480px) {
+  /* Galería: 1 columna en teléfonos pequeños */
   .galeria__grid {
     columns: 1;
   }
@@ -2097,29 +2156,12 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
     gap: 0.4rem;
   }
 
-  .gallery-filter {
+  .galeria__filter-btn {
     font-size: var(--text-xs);
     padding: 0.4rem 0.85rem;
   }
 
-  .contacto__form-wrap {
-    padding: var(--space-md);
-  }
-
-  .form-submit {
-    white-space: normal;
-    word-break: break-word;
-    text-align: center;
-  }
-
-  /* Contener overflows de animaciones fade en mobile */
-  .servicios,
-  .nosotros,
-  .testimonios,
-  .galeria {
-    overflow: hidden;
-  }
-
+  /* Stats: 2 columnas también en 480 */
   .stats__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2128,6 +2170,12 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
     display: none;
   }
 
-  .lightbox__prev { left: 0.5rem; }
-  .lightbox__next { right: 0.5rem; }
+  /* Lightbox: flechas más cerca del borde */
+  .lightbox__prev { left: 0.25rem; }
+  .lightbox__next { right: 0.25rem; }
+
+  /* Hero CTA max-width menor en teléfonos pequeños */
+  .hero__ctas {
+    max-width: 100%;
+  }
 }
