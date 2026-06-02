@@ -153,7 +153,9 @@
       <div class="hero__overlay"></div>
 
       <div class="hero__content">
-        <div class="hero__badge fade-up" data-delay="0">
+        <span class="section-label hero__label fade-up" data-delay="0">Barranquilla · Colombia</span>
+
+        <div class="hero__badge fade-up" data-delay="50" style="display:none">
           <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
           <span>Barranquilla, Colombia</span>
         </div>
@@ -179,10 +181,7 @@
         </div>
       </div>
 
-      <div class="hero__scroll-indicator" aria-hidden="true">
-        <span class="hero__scroll-line"></span>
-        <span class="hero__scroll-text">Descubre más</span>
-      </div>
+      <div class="hero__scroll-indicator" aria-hidden="true">Scroll</div>
     </section>
 
     <!-- ===================== STATS BAR ===================== -->
@@ -219,7 +218,7 @@
       <div class="container">
 
         <div class="section-header fade-up">
-          <span class="section-eyebrow">Lo que hacemos</span>
+          <span class="section-label">LO QUE HACEMOS</span>
           <h2 class="section-title">Nuestros Servicios</h2>
           <p class="section-subtitle">Cada espacio tiene una historia. Nosotros la contamos con diseño.</p>
         </div>
@@ -373,7 +372,7 @@
       <div class="container">
 
         <div class="section-header fade-up">
-          <span class="section-eyebrow">Portafolio</span>
+          <span class="section-label">NUESTRO TRABAJO</span>
           <h2 class="section-title">Nuestra Galería</h2>
           <p class="section-subtitle">Cada proyecto es una obra de arte hecha a medida.</p>
         </div>
@@ -544,27 +543,41 @@
       <div class="container">
         <div class="nosotros__grid">
 
-          <!-- Columna de texto -->
+          <!-- Columna de imagen (izquierda) -->
+          <div class="nosotros__img-wrap fade-left">
+            <img
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80&auto=format&fit=crop"
+              alt="Interior elegante con persianas y cortinas de Decorhouse BAQ"
+              loading="lazy"
+              class="nosotros__img"
+            >
+            <div class="nosotros__img-badge">
+              <span class="nosotros__img-badge-num">8+</span>
+              <span class="nosotros__img-badge-text">Años de experiencia</span>
+            </div>
+          </div>
+
+          <!-- Columna de texto (derecha) -->
           <div class="nosotros__text">
-            <div class="fade-left">
-              <span class="section-eyebrow">Quiénes somos</span>
+            <div class="fade-right">
+              <span class="section-label">QUIÉNES SOMOS</span>
               <h2 class="section-title">Pasión por el Diseño,<br>Compromiso con la Calidad</h2>
             </div>
 
-            <p class="nosotros__desc fade-left" data-delay="100">
-              Somos <strong>Decorhouse BAQ</strong>, una empresa de decoración de interiores y eventos con corazón barranquillero. Nacimos del amor por los espacios bien pensados y la convicción de que cada ambiente puede contar una historia única.
+            <p class="nosotros__body fade-right" data-delay="100">
+              Somos <strong>Decorhouse BAQ</strong>, una empresa de persianas y cortinas con corazón barranquillero. Nacimos del amor por los espacios bien pensados y la convicción de que cada ventana puede contar una historia única.
             </p>
 
-            <p class="nosotros__desc fade-left" data-delay="200">
-              Con más de 8 años transformando hogares, salones de eventos, oficinas y celebraciones en la región Caribe, hemos construido una reputación sólida basada en la creatividad, la atención al detalle y la entrega puntual.
-            </p>
+            <blockquote class="nosotros__highlight fade-right" data-delay="150">
+              Cada espacio merece luz y privacidad perfectamente equilibradas.
+            </blockquote>
 
-            <p class="nosotros__desc fade-left" data-delay="300">
-              Trabajamos contigo desde la primera idea hasta el último detalle — porque tu sueño merece hacerse realidad con el estilo que lo hace único.
+            <p class="nosotros__body fade-right" data-delay="200">
+              Con más de 8 años transformando hogares, oficinas y espacios comerciales en la región Caribe, hemos construido una reputación sólida basada en la creatividad, la atención al detalle y la entrega puntual.
             </p>
 
             <!-- Valores -->
-            <ul class="nosotros__valores fade-left" data-delay="400" role="list">
+            <ul class="nosotros__valores fade-right" data-delay="300" role="list">
               <li class="nosotros__valor">
                 <span class="nosotros__valor-icon" aria-hidden="true">✦</span>
                 <div>
@@ -595,24 +608,10 @@
               </li>
             </ul>
 
-            <a href="#contacto" class="btn btn--primary fade-left" data-delay="500">
+            <a href="#contacto" class="btn btn--primary fade-right" data-delay="400">
               <i class="fas fa-handshake" aria-hidden="true"></i>
               Trabajemos juntos
             </a>
-          </div>
-
-          <!-- Columna de imagen -->
-          <div class="nosotros__img-wrap fade-right">
-            <img
-              src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=85&auto=format&fit=crop"
-              alt="Interior elegante decorado por Decorhouse BAQ"
-              loading="lazy"
-              class="nosotros__img"
-            >
-            <div class="nosotros__img-badge">
-              <span class="nosotros__img-badge-num">8+</span>
-              <span class="nosotros__img-badge-text">Años de experiencia</span>
-            </div>
           </div>
 
         </div>
@@ -624,7 +623,7 @@
       <div class="container">
 
         <div class="section-header fade-up">
-          <span class="section-eyebrow">Lo que dicen</span>
+          <span class="section-label">CLIENTES FELICES</span>
           <h2 class="section-title">Nuestros Clientes Hablan</h2>
           <p class="section-subtitle">La mejor carta de presentación es la experiencia de quienes ya confiaron en nosotros.</p>
         </div>
@@ -633,13 +632,7 @@
 
           <!-- Testimonio 1 -->
           <article class="testimonial-card fade-up" data-delay="0">
-            <div class="testimonial-card__header">
-              <div class="testimonial-card__avatar" aria-hidden="true">MF</div>
-              <div class="testimonial-card__info">
-                <strong class="testimonial-card__name">María Fernanda Pérez</strong>
-                <span class="testimonial-card__service">Decoración de Bodas</span>
-              </div>
-            </div>
+            <div class="testimonial-card__quote" aria-hidden="true">"</div>
             <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">
               <i class="fas fa-star" aria-hidden="true"></i>
               <i class="fas fa-star" aria-hidden="true"></i>
@@ -648,22 +641,20 @@
               <i class="fas fa-star" aria-hidden="true"></i>
             </div>
             <blockquote class="testimonial-card__text">
-              "¡Decorhouse BAQ hizo realidad la boda de mis sueños! El arco floral quedó precioso y cada detalle fue exactamente como lo imaginé. Son súper profesionales, puntuales y atentos. El salón se veía de revista. ¡Los recomiendo con los ojos cerrados!"
+              Las cortinas que instalaron transformaron completamente mi sala. El servicio fue impecable, desde la medición hasta la instalación. Quedé absolutamente encantada con el resultado.
             </blockquote>
-            <div class="testimonial-card__quote-icon" aria-hidden="true">
-              <i class="fas fa-quote-right"></i>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">M</div>
+              <div>
+                <strong class="testimonial-card__name">María Rodríguez</strong>
+                <span class="testimonial-card__location">El Prado, Barranquilla</span>
+              </div>
             </div>
           </article>
 
           <!-- Testimonio 2 -->
           <article class="testimonial-card fade-up" data-delay="150">
-            <div class="testimonial-card__header">
-              <div class="testimonial-card__avatar" aria-hidden="true">CM</div>
-              <div class="testimonial-card__info">
-                <strong class="testimonial-card__name">Carlos Martínez</strong>
-                <span class="testimonial-card__service">Ambientación Navideña</span>
-              </div>
-            </div>
+            <div class="testimonial-card__quote" aria-hidden="true">"</div>
             <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">
               <i class="fas fa-star" aria-hidden="true"></i>
               <i class="fas fa-star" aria-hidden="true"></i>
@@ -672,22 +663,20 @@
               <i class="fas fa-star" aria-hidden="true"></i>
             </div>
             <blockquote class="testimonial-card__text">
-              "Contraté a Decorhouse BAQ para decorar las oficinas de mi empresa en diciembre y el resultado fue espectacular. Los empleados quedaron encantados y hasta los clientes nos hacían fotos. ¡Totalmente diferente a años anteriores! El árbol principal fue el protagonista."
+              Excelente calidad en las persianas para mi oficina. El control de luz es perfecto y el precio justo. El equipo fue muy profesional y terminaron en el tiempo prometido.
             </blockquote>
-            <div class="testimonial-card__quote-icon" aria-hidden="true">
-              <i class="fas fa-quote-right"></i>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">C</div>
+              <div>
+                <strong class="testimonial-card__name">Carlos Mendoza</strong>
+                <span class="testimonial-card__location">Centro Empresarial, Barranquilla</span>
+              </div>
             </div>
           </article>
 
           <!-- Testimonio 3 -->
           <article class="testimonial-card fade-up" data-delay="300">
-            <div class="testimonial-card__header">
-              <div class="testimonial-card__avatar" aria-hidden="true">LJ</div>
-              <div class="testimonial-card__info">
-                <strong class="testimonial-card__name">Laura Jiménez</strong>
-                <span class="testimonial-card__service">Baby Shower &amp; Gender Reveal</span>
-              </div>
-            </div>
+            <div class="testimonial-card__quote" aria-hidden="true">"</div>
             <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">
               <i class="fas fa-star" aria-hidden="true"></i>
               <i class="fas fa-star" aria-hidden="true"></i>
@@ -696,10 +685,14 @@
               <i class="fas fa-star" aria-hidden="true"></i>
             </div>
             <blockquote class="testimonial-card__text">
-              "No tenía ni idea de cómo decorar el baby shower de mi hermana y Valentina en Decorhouse BAQ me guio en todo. La decoración quedó tiernísima, los colores perfectos y llegaron puntual el día del evento. Todas las invitadas querían saber quién había decorado. Mil gracias!"
+              El panel japonés quedó exactamente como lo imaginé. Muy profesionales y puntuales. Le dio un toque elegante y moderno a mi sala que supera todas mis expectativas. 100% recomendados.
             </blockquote>
-            <div class="testimonial-card__quote-icon" aria-hidden="true">
-              <i class="fas fa-quote-right"></i>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">A</div>
+              <div>
+                <strong class="testimonial-card__name">Andrea Ospina</strong>
+                <span class="testimonial-card__location">Puerto Colombia, Atlántico</span>
+              </div>
             </div>
           </article>
 
@@ -713,7 +706,7 @@
       <div class="container">
 
         <div class="section-header fade-up">
-          <span class="section-eyebrow">Hablemos</span>
+          <span class="section-label">HABLEMOS</span>
           <h2 class="section-title">Cotiza Tu Proyecto</h2>
           <p class="section-subtitle">Cuéntanos tu idea y te enviamos una propuesta personalizada sin costo.</p>
         </div>
