@@ -358,14 +358,9 @@ section:not(.hero):not(.stats) {
 
 /* Logo */
 .navbar__logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  font-weight: 700;
-  color: var(--color-white);
-  letter-spacing: 0.02em;
+  text-decoration: none;
   transition: opacity var(--transition-base);
 }
 
@@ -373,18 +368,81 @@ section:not(.hero):not(.stats) {
   opacity: 0.85;
 }
 
-.navbar__logo-icon {
-  color: var(--color-secondary);
-  font-size: 1.4rem;
+/* Wordmark compartido: navbar + footer */
+.logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  gap: 0.12rem;
 }
 
-.navbar__logo-highlight {
-  color: var(--color-secondary);
+.logo-main {
+  display: flex;
+  align-items: baseline;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.45rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
 }
 
-.navbar__logo-house {
+.logo-decor {
+  color: var(--color-white);
+  font-weight: 300;
+}
+
+.logo-house-text {
   color: var(--color-secondary);
   font-weight: 700;
+}
+
+/* "o" con detalle de persiana (líneas horizontales encima) */
+.logo-o {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-o::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 8%;
+  width: 84%;
+  height: 1.5px;
+  background: var(--color-secondary);
+  box-shadow: 0 -4px 0 var(--color-secondary), 0 -8px 0 var(--color-secondary);
+}
+
+/* Línea decorativa • ————— • */
+.logo-divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.2rem;
+}
+
+.logo-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--color-secondary);
+  opacity: 0.85;
+}
+
+.logo-dot {
+  color: var(--color-secondary);
+  font-size: 0.42rem;
+  line-height: 1;
+}
+
+/* Subtítulo "Persianas & Cortinas" */
+.logo-tagline {
+  color: var(--color-secondary);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.46rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.92;
 }
 
 /* Links */
@@ -714,22 +772,23 @@ section:not(.hero):not(.stats) {
 }
 
 .footer__logo {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: 700;
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  display: inline-flex;
+  text-decoration: none;
   margin-bottom: var(--space-sm);
+  transition: opacity var(--transition-base);
 }
 
-.footer__logo i {
-  color: var(--color-secondary);
+.footer__logo:hover {
+  opacity: 0.85;
 }
 
-.footer__logo span {
-  color: var(--color-secondary);
+.footer__logo .logo-main {
+  font-size: 1.65rem;
+}
+
+.footer__logo .logo-tagline {
+  font-size: 0.52rem;
+  letter-spacing: 0.24em;
 }
 
 .footer__tagline {
