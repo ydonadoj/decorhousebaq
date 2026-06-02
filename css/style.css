@@ -110,6 +110,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -119,6 +120,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-surface-warm);
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Clase de etiqueta de sección reutilizable */
@@ -1568,15 +1570,16 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
   border-radius: var(--radius-xl);
   overflow: hidden;
   aspect-ratio: 4/5;
+  contain: layout;
 }
 
-/* Borde dorado desplazado */
+/* Borde dorado desplazado — solo en desktop */
 .nosotros__img-wrap::before {
   content: '';
   position: absolute;
-  inset: -12px;
+  inset: -10px;
   border: 2px solid rgba(201,168,76,0.3);
-  border-radius: calc(var(--radius-xl) + 12px);
+  border-radius: calc(var(--radius-xl) + 10px);
   pointer-events: none;
   z-index: 1;
 }
@@ -2039,8 +2042,13 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
 
   .testimonial-card {
     scroll-snap-align: start;
-    min-width: 85vw;
+    min-width: min(85vw, 320px);
+    max-width: 90vw;
     flex-shrink: 0;
+  }
+
+  .nosotros__img-wrap::before {
+    display: none;
   }
 
   .stats__grid {
