@@ -270,12 +270,12 @@ window.ChatBot = (() => {
         await renderBotMessage(
           '¡Mucho gusto, <strong>' + sanitize(userData.nombre) + '</strong>! 🌟<br>¿Cuál de nuestros servicios te interesa?',
           [
-            { label: '🏠 Decoración de Interiores',     action: () => { userData.servicio = 'Decoración de Interiores';     goState('city'); } },
-            { label: '🎉 Decoración de Eventos',        action: () => { userData.servicio = 'Decoración de Eventos';        goState('city'); } },
-            { label: '🎄 Ambientación Navideña',        action: () => { userData.servicio = 'Ambientación Navideña';        goState('city'); } },
-            { label: '💒 Decoración de Bodas',          action: () => { userData.servicio = 'Decoración de Bodas';          goState('city'); } },
-            { label: '👶 Baby Shower & Gender Reveal',  action: () => { userData.servicio = 'Baby Shower & Gender Reveal';  goState('city'); } },
-            { label: '🏪 Espacios Comerciales',         action: () => { userData.servicio = 'Diseño de Espacios Comerciales'; goState('city'); } }
+            { label: '🪟 Cortinas',        action: () => { userData.servicio = 'Cortinas';        goState('city'); } },
+            { label: '🔲 Persianas',       action: () => { userData.servicio = 'Persianas';       goState('city'); } },
+            { label: '🗂️ Panel Japonés',  action: () => { userData.servicio = 'Panel Japonés';   goState('city'); } },
+            { label: '☀️ Sheer & Blackout', action: () => { userData.servicio = 'Sheer & Blackout'; goState('city'); } },
+            { label: '🎨 Telas',           action: () => { userData.servicio = 'Telas';           goState('city'); } },
+            { label: '🖌️ Papel Colgante', action: () => { userData.servicio = 'Papel Colgante';  goState('city'); } }
           ]
         );
         break;
