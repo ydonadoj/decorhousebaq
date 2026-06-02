@@ -382,6 +382,11 @@ section:not(.hero):not(.stats) {
   color: var(--color-secondary);
 }
 
+.navbar__logo-house {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
 /* Links */
 .navbar__links {
   display: flex;
