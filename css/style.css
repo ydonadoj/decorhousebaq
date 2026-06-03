@@ -449,7 +449,7 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
   color: var(--color-secondary);
   font-weight: 300;
   font-size: 0.72em;
-  opacity: 0.8;
+  opacity: 1;
   letter-spacing: 0.08em;
   align-self: flex-end;
   padding-bottom: 0.1em;
