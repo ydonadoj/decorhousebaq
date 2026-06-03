@@ -1150,117 +1150,138 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
 .servicios__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 /* Card */
 .service-card {
   background: var(--color-white);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
   display: flex;
   flex-direction: column;
-  transition: transform 400ms cubic-bezier(0.34,1.2,0.64,1), box-shadow 400ms ease;
-  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform 450ms cubic-bezier(0.34,1.2,0.64,1), box-shadow 450ms ease;
+  border: 1px solid rgba(201,168,76,0.08);
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.13), 0 0 0 1px rgba(201,168,76,0.2);
 }
 
+/* Imagen */
 .service-card__img-wrap {
   position: relative;
   overflow: hidden;
-  height: 260px;
+  height: 300px;
 }
 
 .service-card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 600ms ease;
+  transition: transform 700ms ease;
 }
 
 .service-card:hover .service-card__img {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
+/* Gradiente elegante de abajo hacia arriba */
 .service-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(13,13,26,0.7) 0%, rgba(13,13,26,0.1) 60%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(13,13,26,0.85) 0%,
+    rgba(13,13,26,0.3) 45%,
+    transparent 75%
+  );
 }
 
-.service-card__icon-wrap {
+/* Título sobre la imagen */
+.service-card__img-title {
   position: absolute;
-  bottom: var(--space-sm);
-  left: var(--space-sm);
-  width: 40px;
-  height: 40px;
+  bottom: 1.1rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Línea dorada bajo el título en la imagen */
+.service-card__img-title::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2px;
   background: var(--color-secondary);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-primary-dark);
-  font-size: 1rem;
-  box-shadow: 0 4px 12px rgba(201,168,76,0.4);
-  transition: transform var(--transition-spring);
+  margin-top: 0.4rem;
+  transition: width 400ms ease;
 }
 
-.service-card:hover .service-card__icon-wrap {
-  transform: scale(1.1);
+.service-card:hover .service-card__img-title::after {
+  width: 100%;
 }
 
+/* Ocultar icon-wrap — reemplazado por título en imagen */
+.service-card__icon-wrap {
+  display: none;
+}
+
+/* Cuerpo de la card */
 .service-card__body {
-  padding: 1.5rem;
+  padding: 1.4rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 0.75rem;
-  border-top: 2px solid transparent;
-  transition: border-color 300ms ease;
+  gap: 0.6rem;
+  background: var(--color-white);
 }
 
-.service-card:hover .service-card__body {
-  border-top-color: var(--color-secondary);
-}
-
+/* Título en el body (se oculta — ahora está en la imagen) */
 .service-card__title {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
+  display: none;
 }
 
 .service-card__desc {
   font-size: 0.875rem;
   color: var(--color-text-light);
-  line-height: 1.65;
-  margin-bottom: 1.25rem;
+  line-height: 1.7;
   flex: 1;
 }
 
 .service-card__btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-secondary);
   background: transparent;
-  border: 1.5px solid var(--color-secondary);
+  border: 1.5px solid rgba(201,168,76,0.4);
   border-radius: var(--radius-full);
-  padding: 0.5rem 1.25rem;
+  padding: 0.55rem 1.35rem;
   cursor: pointer;
   transition: all 300ms ease;
   font-family: var(--font-body);
   align-self: flex-start;
+  margin-top: auto;
+}
+
+.service-card__btn:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 16px rgba(201,168,76,0.35);
 }
 
 .service-card__btn:hover {
