@@ -1281,12 +1281,6 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
   background: var(--color-secondary);
   border-color: var(--color-secondary);
   color: var(--color-primary-dark);
-  box-shadow: 0 4px 16px rgba(201,168,76,0.35);
-}
-
-.service-card__btn:hover {
-  background: var(--color-secondary);
-  color: var(--color-primary-dark);
   transform: none;
   box-shadow: 0 4px 16px rgba(201,168,76,0.35);
 }
