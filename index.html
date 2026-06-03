@@ -538,6 +538,39 @@
       </div>
     </div>
 
+    <!-- ===================== INSTAGRAM FEED ===================== -->
+    <section class="instagram-feed" id="instagram" aria-label="Feed de Instagram de DecorHouse BAQ">
+      <div class="container">
+
+        <div class="section-header fade-up">
+          <span class="section-label">SÍGUENOS</span>
+          <h2 class="section-title instagram-feed__title">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            @decorhousebaq
+          </h2>
+          <p class="section-subtitle">Nuestros proyectos más recientes, directo desde Instagram</p>
+        </div>
+
+        <div class="instagram-feed__widget fade-up" data-delay="200">
+          <behold-widget feed-id="mDw7QyfZDL0WSrcxRBVI"></behold-widget>
+        </div>
+
+        <div class="instagram-feed__follow fade-up" data-delay="400">
+          <a
+            href="https://www.instagram.com/decorhousebaq/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--instagram"
+            aria-label="Seguir a DecorHouse BAQ en Instagram"
+          >
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            Seguir en Instagram
+          </a>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ===================== NOSOTROS ===================== -->
     <section class="nosotros" id="nosotros" aria-label="Sobre nosotros">
       <div class="container">
@@ -1047,6 +1080,17 @@
   <!-- Scripts -->
   <script src="js/main.js" defer></script>
   <script src="js/chatbot.js" defer></script>
+
+  <!-- Behold Instagram Widget — carga diferida cuando el navegador está listo -->
+  <script>
+    (() => {
+      const d = document, s = d.createElement('script');
+      s.type = 'module';
+      s.src = 'https://w.behold.so/widget.js';
+      s.fetchpriority = 'low';
+      d.head.append(s);
+    })();
+  </script>
 
 </body>
 </html>

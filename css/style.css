@@ -1509,6 +1509,97 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
    16. NOSOTROS
    ========================================================================== */
 
+/* ==========================================================================
+   INSTAGRAM FEED
+   ========================================================================== */
+
+.instagram-feed {
+  padding: var(--space-4xl) 0;
+  background: var(--color-primary-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Líneas decorativas doradas superior e inferior */
+.instagram-feed::before,
+.instagram-feed::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.35), transparent);
+}
+.instagram-feed::before { top: 0; }
+.instagram-feed::after  { bottom: 0; }
+
+.instagram-feed .section-label { color: var(--color-secondary); }
+.instagram-feed .section-subtitle { color: rgba(255,255,255,0.55); }
+
+/* Título con ícono degradado Instagram */
+.instagram-feed__title {
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.instagram-feed__title i {
+  font-size: 0.85em;
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Contenedor del widget */
+.instagram-feed__widget {
+  margin: var(--space-2xl) 0 var(--space-xl);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* Botón de seguir */
+.instagram-feed__follow {
+  text-align: center;
+}
+
+.btn--instagram {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  color: var(--color-white);
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(131,58,180,0.3);
+}
+
+.btn--instagram:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(131,58,180,0.45);
+}
+
+/* Mobile: reducir padding */
+@media (max-width: 768px) {
+  .instagram-feed {
+    padding: var(--space-2xl) 0;
+    overflow: hidden;
+  }
+
+  .instagram-feed__widget {
+    margin: var(--space-lg) 0;
+    border-radius: var(--radius-md);
+  }
+
+  .instagram-feed__follow .btn--instagram {
+    width: 100%;
+    justify-content: center;
+    max-width: 320px;
+  }
+}
+
+/* ==========================================================================
+   NOSOTROS
+   ========================================================================== */
+
 .nosotros {
   padding: var(--space-4xl) 0;
   background: var(--color-white);
