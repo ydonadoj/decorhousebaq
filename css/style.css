@@ -445,6 +445,16 @@ section:not(.hero):not(.stats):not(.servicios):not(.galeria):not(.nosotros):not(
   font-weight: 700;
 }
 
+.logo-baq {
+  color: var(--color-secondary);
+  font-weight: 300;
+  font-size: 0.72em;
+  opacity: 0.8;
+  letter-spacing: 0.08em;
+  align-self: flex-end;
+  padding-bottom: 0.1em;
+}
+
 /* "o" con detalle de persiana (líneas horizontales encima) */
 .logo-o {
   position: relative;

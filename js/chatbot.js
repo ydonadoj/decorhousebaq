@@ -273,8 +273,8 @@ window.ChatBot = (() => {
             { label: '🪟 Cortinas',        action: () => { userData.servicio = 'Cortinas';        goState('city'); } },
             { label: '🔲 Persianas',       action: () => { userData.servicio = 'Persianas';       goState('city'); } },
             { label: '🗂️ Panel Japonés',  action: () => { userData.servicio = 'Panel Japonés';   goState('city'); } },
-            { label: '☀️ Sheer & Blackout', action: () => { userData.servicio = 'Sheer & Blackout'; goState('city'); } },
-            { label: '🎨 Telas',           action: () => { userData.servicio = 'Telas';           goState('city'); } },
+            { label: '☀️ Sheer',          action: () => { userData.servicio = 'Sheer';            goState('city'); } },
+            { label: '🌑 Blackout',        action: () => { userData.servicio = 'Blackout';         goState('city'); } },
             { label: '🖌️ Papel Colgante', action: () => { userData.servicio = 'Papel Colgante';  goState('city'); } }
           ]
         );
